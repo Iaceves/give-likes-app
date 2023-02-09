@@ -1,0 +1,42 @@
+.carouselContainer {
+    height: 500px;
+    width: 900px;
+    margin: 0 auto;
+    display: flex;
+    margin-top: 30px;
+}
+
+.carouselItems {
+    height: 100%;
+}
+
+.likeLogo {
+    text-align: center;
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.likeLogo p{
+    margin-bottom: 0px;
+}
+
+.likesNum {
+    display: flex;
+    font-size: 16px;
+    margin-right: 10px;
+}
+
+.imgLike {
+    height: 50px;
+    cursor: pointer;
+}
+
+.signUpCss {
+    margin-top: 80px;
+    margin: Auto;
+    width: 600px;
+
+}

@@ -1,23 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+import Slider from "./components/Slider";
+import LikeLogo from "./components/LikeLogo";
+import SignUp from "./components/SignUp";
+import LoginForm from "./components/LoginForm";
+import "bootstrap/dist/css/bootstrap.min.css";
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Router>
+        <nav>
+          <ul>
+            <li>
+              <Link to="/">Login</Link>
+            </li>
+            <li>
+              <Link to="/signUp">SignUp</Link>
+            </li>
+            <li>
+              <Link to="/slider">Slider</Link>
+            </li>
+          </ul>
+        </nav>
+
+        <Routes>
+          <Route path="/" element={LoginForm()} />
+          <Route path="/signUp" element={SignUp()} />
+          <Route path="/slider" element={[Slider(), LikeLogo()]} />
+        </Routes>
+      </Router>
     </div>
   );
 }
